@@ -1,7 +1,14 @@
 # mdns-scan-avahi
 
-A simple mDNS scanner with only lists the most useful information in a concise
-way. It is similar to mdns-scan but implemented using the Avahi mDNS backend.
+## Introduction
+A simple mDNS scanner which only lists the most useful device information. It is
+similar to mdns-scan but implemented using the Avahi mDNS backend.
+
+## Motivation
+
+Author needed to quickly identify new devices on a network, in particulat the IP
+and port of newly added devices. The avahi-browse tool can be used for that but
+the output is very messy and hard to read. Hence the creation of this tool.
 
 ## Usage
 
