@@ -52,8 +52,6 @@ Brother MFC-L2730DW series         192.168.0.188         port 80     type _uscan
 
 ### Installation from source
 
-The latest source releases can be found [here](https://github.com/lundmar/mdns-scan-avahi/releases).
-
 Install steps:
 ```
 $ meson setup build
