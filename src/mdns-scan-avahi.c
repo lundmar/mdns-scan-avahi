@@ -41,7 +41,7 @@ void *thread_scan_spinner_function(void *dummyPtr)
     int counter = 0;
     while (1)
     {
-        usleep(800000);
+        usleep(1000000);
         pthread_mutex_lock(&print_mutex);
         printf("Scanning..  ");
         printf("\b%c", "|/-\\"[counter++]);
