@@ -46,7 +46,7 @@ void *thread_scan_spinner_function(void *dummyPtr)
         printf("Scanning..  ");
         printf("\b%c", "|/-\\"[counter++]);
         printf("\r");
-        if (counter == 3)
+        if (counter == 4)
         {
             counter = 0;
         }
