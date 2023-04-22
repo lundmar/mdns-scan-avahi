@@ -8,7 +8,7 @@ similar to mdns-scan but implemented using the Avahi mDNS backend.
 
 Author needed to quickly identify new devices on a network, in particulat the IP
 and port of newly added devices. The avahi-browse tool can be used for that but
-its output is very messy and hard to read. Hence the creation of this tool.
+its output is quite noisy and hard to read. Hence the creation of this tool.
 
 ## Usage
 
