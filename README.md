@@ -56,10 +56,15 @@ The latest source releases can be found [here](https://github.com/lundmar/mdns-s
 
 Install steps:
 ```
-$ meson build
+$ meson setup build
 $ meson compile -C build
 $ meson install -C build
 ```
 
 Note: The meson install steps may differ depending on your specific system.
+
+Note: To install in home directory, do e.g.:
+```
+$ meson setup build --prefix=$HOME/opt/micro-dns-avahi
+```
 
