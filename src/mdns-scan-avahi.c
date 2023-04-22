@@ -16,11 +16,13 @@
 ***/
 
 #include <stdio.h>
+#include <unistd.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
 #include <net/if.h>
+#include <pthread.h>
 
 #include <avahi-client/client.h>
 #include <avahi-client/lookup.h>
@@ -29,7 +31,30 @@
 #include <avahi-common/malloc.h>
 #include <avahi-common/error.h>
 
+pthread_t print_thread;
+pthread_mutex_t print_mutex = PTHREAD_MUTEX_INITIALIZER;
+
 static AvahiSimplePoll *simple_poll = NULL;
+
+void *thread_scan_spinner_function(void *dummyPtr)
+{
+    int counter = 0;
+    while (1)
+    {
+        usleep(800000);
+        pthread_mutex_lock(&print_mutex);
+        printf("Scanning..  ");
+        printf("\b%c", "|/-\\"[counter++]);
+        printf("\r");
+        if (counter == 3)
+        {
+            counter = 0;
+        }
+        fflush(stdout);
+        pthread_mutex_unlock(&print_mutex);
+    }
+    return NULL;
+}
 
 static void resolve_callback(
     AvahiServiceResolver *r,
@@ -59,7 +84,9 @@ static void resolve_callback(
 
             avahi_address_snprint(a, sizeof(a), address);
             t = avahi_string_list_to_string(txt);
+            pthread_mutex_lock(&print_mutex);
             printf("%-42s %-30s  port %-6u type %s\n" , name, a, port, type);
+            pthread_mutex_unlock(&print_mutex);
 
             avahi_free(t);
         }
@@ -199,6 +226,8 @@ int main(AVAHI_GCC_UNUSED int argc, AVAHI_GCC_UNUSED char*argv[]) {
         fprintf(stderr, "Failed to create service browser: %s\n", avahi_strerror(avahi_client_errno(client)));
         goto fail;
     }
+
+    pthread_create(&print_thread, NULL, thread_scan_spinner_function, NULL);
 
     /* Run the main loop */
     avahi_simple_poll_loop(simple_poll);

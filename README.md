@@ -46,6 +46,7 @@ Brother MFC-L2730DW series         192.168.0.188         port 80     type _http.
 Brother MFC-L2730DW series         192.168.0.188         port 80     type _http._tcp
 Brother MFC-L2730DW series         192.168.0.188         port 80     type _uscan._tcp
 Brother MFC-L2730DW series         192.168.0.188         port 80     type _uscan._tcp
+Scanning.. /
 ```
 
 ## Installation
