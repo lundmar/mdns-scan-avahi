@@ -1,7 +1,7 @@
 # mdns-scan-avahi
 
-A simple mdns scanner with only lists the most useful information in a concise
-way.
+A simple mDNS scanner with only lists the most useful information in a concise
+way. It is similar to mdns-scan but implemented using the Avahi mDNS backend.
 
 ## Usage
 
