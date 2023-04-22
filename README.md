@@ -3,6 +3,44 @@
 A simple mdns scanner with only lists the most useful information in a concise
 way.
 
+## Usage
+
+```
+$ mdns-scan-avahi
+switch2b370c                               192.168.0.120                   port 80     type _http._tcp
+switch2b370c                               192.168.0.120                   port 80     type _http._tcp
+switch2b370c                               192.168.0.120                   port 80     type _http._tcp
+switch2b370c                               192.168.0.120                   port 80     type _http._tcp
+Philips Hue - 93E705                       192.168.0.177                   port 443    type _hue._tcp
+Philips Hue - 93E705                       192.168.0.177                   port 443    type _hue._tcp
+Philips Hue - 93E705                       192.168.0.177                   port 443    type _hue._tcp
+Philips Hue - 93E705                       192.168.0.177                   port 443    type _hue._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 9100   type _pdl-datastream._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 9100   type _pdl-datastream._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 515    type _printer._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 515    type _printer._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 631    type _ipp._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 631    type _ipp._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 54921  type _scanner._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 54921  type _scanner._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _http._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _http._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _uscan._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _uscan._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 9100   type _pdl-datastream._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 9100   type _pdl-datastream._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 515    type _printer._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 515    type _printer._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 631    type _ipp._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 631    type _ipp._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 54921  type _scanner._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 54921  type _scanner._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _http._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _http._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _uscan._tcp
+Brother MFC-L2730DW series                 192.168.0.188                   port 80     type _uscan._tcp
+```
+
 ## Installation
 
 ### Installation from source
