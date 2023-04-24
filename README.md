@@ -36,6 +36,8 @@ Scanning.. /
 
 ### Installation from source
 
+First make sure you have libavahi-client-dev installed.
+
 Install steps:
 ```
 $ meson setup build
