@@ -49,6 +49,6 @@ Note: The meson install steps may differ depending on your specific system.
 
 Note: To install in home directory, do e.g.:
 ```
-$ meson setup build --prefix=$HOME/opt/micro-dns-avahi
+$ meson setup build --prefix=$HOME/opt/mdns-scan-avahi
 ```
 
